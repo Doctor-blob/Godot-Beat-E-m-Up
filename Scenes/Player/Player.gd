@@ -392,9 +392,12 @@ func TakeDamage(AttackDamage, delta, dir):
 func _on_HealthBar_health_depleted():
 	#HealthDepleted is True
 	HealthDepleted = true
+	emit_signal("Killed")
+	print("lol")
 
 func Kill():
 	emit_signal("Killed")
+	print("lol")
 
 func Respawn():
 	self.visible = false
@@ -427,10 +430,11 @@ func RaycastMove():
 		Raycast.set_rotation(Rotation)
 
 func PlayerIcons():
-	var PlayerID  = ("Player " + PlayerIndex as String)
+	pass
+	#var PlayerID  = ("Player " + PlayerIndex as String)
 	
-	var path = load("res://Assets/UI/Player Icons/ " + PlayerID + ".png")
-	$PlayerIcon.texture = path
+	#var path = load("res://Assets/UI/Player Icons/ " + PlayerID + ".png")
+	#$PlayerIcon.texture = path
 	
 #Attack System
 func Attack(delta):

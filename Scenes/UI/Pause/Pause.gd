@@ -14,17 +14,17 @@ func _input(event):
 		if MainMenu.visible == false:
 			$MainMenu.set_visible(true)
 			$Background.set_visible(true)
-			$Settings.set_visible(false)
+			#$Settings.set_visible(false)
 			get_tree().paused = true
 		elif SettingsMenu.visible == true && MainMenu.visible == false:
 			$MainMenu.set_visible(true)
 			$Background.set_visible(true)
-			$Settings.set_visible(false)
+			#$Settings.set_visible(false)
 			get_tree().paused = true
 		elif MainMenu.visible == true:
 			$MainMenu.set_visible(false)
 			$Background.set_visible(false)
-			$Settings.set_visible(false)
+			#$Settings.set_visible(false)
 			get_tree().paused = false
 		
 func _on_Menu_pressed():
